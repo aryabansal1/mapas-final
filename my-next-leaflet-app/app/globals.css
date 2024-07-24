@@ -1,7 +1,23 @@
+/* globals.css */
 @import 'leaflet/dist/leaflet.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,18 +33,69 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+/* styles.css */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/path-to-your-font-files/ProximaNova-Regular.woff2') format('woff2'),
+       url('/path-to-your-font-files/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/path-to-your-font-files/ProximaNova-Medium.woff2') format('woff2'),
+       url('/path-to-your-font-files/ProximaNova-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Define the styles for different font sizes */
+.title-large {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: normal;
+}
+
+.title-medium {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.title-small {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.label-large {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.label-medium {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.label-small {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
